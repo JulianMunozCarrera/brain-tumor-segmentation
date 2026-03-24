@@ -200,6 +200,6 @@ This project is licensed under the MIT License — see [LICENSE](LICENSE) for de
 
 ## Author
 
-**[Your Name]** — CS (AI/ML) · Neuroscience · Aspiring Neurosurgeon
+**Julian Munoz** — CS (AI/ML) · Neuroscience · Aspiring Neurosurgeon
 
 *Building at the intersection of artificial intelligence and neurosurgery.*
