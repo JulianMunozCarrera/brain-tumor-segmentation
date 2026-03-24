@@ -1,6 +1,6 @@
 # 🧠 Brain Tumor Segmentation from MRI using Deep Learning
 
-> A deep learning pipeline for automated brain tumor segmentation from multi-modal MRI scans, combining state-of-the-art computer vision with neuroscience-informed analysis.
+> A deep learning pipeline for automated brain tumor segmentation from multimodal MRI scans, combining computer vision with neuroscience informed analysis.
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org)
@@ -10,12 +10,12 @@
 
 ## Overview
 
-Brain tumors are among the most challenging pathologies in neurosurgery. Accurate segmentation of tumor regions from MRI is critical for surgical planning, treatment monitoring, and prognostic assessment — yet manual segmentation is time-consuming and subject to inter-rater variability.
+Brain tumors are some of the most challenging pathologies in neurosurgery. Accurate segmentation of tumor regions from MRI is critical for surgical planning, treatment monitoring, and prognostic assessment, yet manual segmentation is very time consuming and subject to inter-rater variability.
 
 This project implements a **U-Net-based segmentation pipeline** trained on the [BraTS (Brain Tumor Segmentation) Challenge](https://www.synapse.org/brats) dataset, capable of delineating three clinically meaningful tumor sub-regions:
 
-- **Enhancing Tumor (ET)** — the active, contrast-enhancing core visible on T1-weighted post-gadolinium MRI
-- **Tumor Core (TC)** — includes the enhancing tumor, necrotic core, and non-enhancing solid tumor
+- **Enhancing Tumor (ET)** — the active, contrast enhancing core visible on T1-weighted post gadolinium MRI
+- **Tumor Core (TC)** — includes the enhancing tumor, necrotic core, and non enhancing solid tumor
 - **Whole Tumor (WT)** — the complete tumor extent including peritumoral edema
 
 ### Why These Sub-Regions Matter (A Neuroscience Perspective)
@@ -194,7 +194,7 @@ Medical imaging datasets are small. The augmentation pipeline includes random ro
 
 ## License
 
-This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
+This project is licensed under the MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
