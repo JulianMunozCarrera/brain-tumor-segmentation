@@ -1,0 +1,51 @@
+# Brain Tumor Segmentation - Training Configuration
+# =================================================
+
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  num_workers: 4
+  # BraTS MRI modalities: T1, T1ce (contrast-enhanced), T2, FLAIR
+  modalities: ["t1", "t1ce", "t2", "flair"]
+  # Tumor labels: 0=background, 1=necrotic/non-enhancing, 2=edema, 4=enhancing
+  num_classes: 4
+
+model:
+  architecture: "unet"
+  encoder: "resnet34"
+  encoder_weights: "imagenet"    # Transfer learning from ImageNet
+  in_channels: 4                  # 4 MRI modalities as input channels
+  classes: 3                      # 3 tumor sub-regions (WT, TC, ET)
+
+training:
+  batch_size: 4
+  epochs: 100
+  learning_rate: 0.0001
+  weight_decay: 0.00001
+  optimizer: "adam"
+  scheduler: "cosine"            # Cosine annealing LR schedule
+  early_stopping_patience: 15
+
+loss:
+  type: "combined"               # Dice + Focal loss
+  dice_weight: 0.5
+  focal_weight: 0.5
+  focal_gamma: 2.0               # Focus on hard examples
+
+augmentation:
+  random_flip: true
+  random_rotate: 15              # degrees
+  elastic_deform: true
+  intensity_shift: 0.1
+  intensity_scale: 0.1
+  random_crop_size: [128, 128, 128]
+
+evaluation:
+  metrics: ["dice", "hausdorff95", "sensitivity", "specificity"]
+  save_predictions: true
+  save_gradcam: true
+
+paths:
+  checkpoint_dir: "results/models"
+  log_dir: "results/logs"
+  figure_dir: "results/figures"
