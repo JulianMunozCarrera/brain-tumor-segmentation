@@ -98,7 +98,7 @@ brain-tumor-segmentation/
 ### Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/brain-tumor-segmentation.git
+git clone https://github.com/JulianMunozCarrera/brain-tumor-segmentation.git
 cd brain-tumor-segmentation
 pip install -r requirements.txt
 ```
